@@ -1,0 +1,10 @@
+body {
+  color:#444443;
+}
+#content {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  word-break: break-all;
+}

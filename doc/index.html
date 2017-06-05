@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xiedacon的个人简历</title>
+  <link href="https://avatars2.githubusercontent.com/u/14571125" rel="shortcut icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/marked.min.js"></script>
+  <script src="js/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="content">
+
+  </div>
+</body>
+
+<script>
+  axios.get('../README.md').then(function (res) {
+    if (res.status === 200) {
+      document.getElementById('content').innerHTML = marked(res.data);
+    } else {
+      console.error('README.md lost')
+    }
+  })
+
+</script>
+
+</html>
