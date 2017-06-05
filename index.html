@@ -18,7 +18,7 @@
 </body>
 
 <script>
-  axios.get('../README.md').then(function (res) {
+  axios.get('README.md').then(function (res) {
     if (res.status === 200) {
       document.getElementById('content').innerHTML = marked(res.data);
     } else {
