@@ -4,8 +4,6 @@
 * 本科/华中农业大学/动物医学
 * Github: [https://github.com/xiedacon](https://github.com/xiedacon)
 * 期望职位: NodeJS初级程序员
-* 期望薪资: -
-* 期望城市: 杭州
 * 到岗时间: 7月15号后
 
 # 联系方式
@@ -26,7 +24,7 @@
 * 态度: 轻度代码洁癖
 * 学习策略: 官方文档/书籍 => 技术博客 => google
 * 劣势: 非科班出身
-  * 补救: 计算机组成原理、编译原理、啊哈! 算法等基础书籍
+  * 补救: 阅读计算机组成原理、编译原理、啊哈! 算法等基础书籍，在leetcode上做算法题([项目地址](https://github.com/xiedacon/leetcode))
 
 # 开源项目
 
@@ -36,7 +34,7 @@
 
 * [nodeclub-koa](https://github.com/xiedacon/nodeclub-koa)
 
-  nodeclue-koa 是 nodeclue 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同，详情请看项目 README
+  nodeclue-koa 是 nodeclue 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同，详情请看项目 [README](https://github.com/xiedacon/nodeclub-koa/blob/master/README.md)
 
 * [music](https://github.com/xiedacon/music)
 
