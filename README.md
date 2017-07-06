@@ -12,22 +12,6 @@
 * QQ: 1063462598
 * Email: xiedacon@qq.com
 
-# 学习经历
-
-* 2015.6~2016.1 自学 javaweb 基础
-* 2016.1~2016.2 自学前端html css js
-* 2016.3~2016.5 bar 1.0
-* 2016.5~2016.6 bar 2.0
-* 2016.6-2016.7 es6 MDN html5 css3
-* 2016.7~2016.10 music
-* 2016.11~2017.3 重构music
-* 2016.10~今天 linux
-* 2017.1~2017.2 深入java: jvm/jdk源码(集合、并发)
-* 2017.2~2017.3 leetcode
-* 2017.3~今天 node
-* 2017.4~2017.5 nodeclue-koa
-* 2017.6~今天 spider-trending
-
 # 自我评价
 
 * 定位: 主攻node、其他方面可以打打辅助 node node node只想做node，当然别的方面可以打打辅助
@@ -38,19 +22,40 @@
   * 读书 [书单]()
   * leetcode刷题 [项目地址](https://github.com/xiedacon/leetcode)
 
+# 学习经历
+
+* 2015.6~2016.1 自学 javaweb 基础
+* 2016.1~2016.2 自学前端 ( html、css、js )
+* 2016.3~2016.5 bar 1.0 项目
+* 2016.5~2016.6 bar 2.0 项目
+* 2016.6-2016.7 重构前端知识 ( 从 MDN 学习 es6、html5、css3 )
+* 2016.7~2016.10 music 项目
+* 2016.10~今天 学习 linux
+* 2017.1~2017.2 深入 java: jvm ( 深入理解Java虚拟机 ) / jdk源码 ( 集合、并发 )
+* 2017.2~2017.3 leetcode 刷题
+* 2017.3~今天 自学 node ( 深入浅出Node.js、官网api、... )
+* 2017.4~2017.5 nodeclue-koa 项目
+* 2017.6~今天 spider-trending 项目
+
 # 开源项目
 
-* [spider-trending](https://github.com/xiedacon/spider-trending)
+### [spider-trending](https://github.com/xiedacon/spider-trending)
 
   专门用于爬取 github trending 的爬虫，数据分析部分尚未完成
 
-  * 做完nodeclub-koa后，对做web应用有些厌倦，闲了一段时间，想起以前一直想做的爬虫项目，燃起了对爬虫的兴趣，就有了这个项目，至于为什么目标是github trending而不是像别的爬虫爬妹子图啥的，因为个人觉得，爬虫其本身的技术是很简单的，无非是获取解析html页面，有趣的是爬虫爬到数据之后的分析与总结，github trending的数据有这个特性，比如说把项目根据一年star数之和排序，哪一月／周／天的star数最多／最少（程序员的开源热点时间..），一个项目的star趋势怎样，是突然增加然后消失不见，还是保持稳定的增长曲线..
-  * 爬虫根据功能分为控制器、下载器、解析器、储存器分别对应项目根目录的spider.js+cron、downloader、parser、store，目前只完成了从html到json部分，还没有做数据分析，因为数据量不够
-  * 目前的难点在于执行周期的控制，普适的解决方案有：timer(setTimeout)、调用linux协程、redis键空间通知、mq等、还有一些混合方案，相关的库有node-schedule、node-cron，略微看了一下它们的源码，主要以js的timer为主，个人觉得，js做这种事情不大靠谱，主要是万一node挂了怎么办，所以用的redis键空间通知的方案，这样除非node挂的时候正好有一个键到期，周期控制还是比较准确的，退一步讲，就算这种情况发生，还可以通过执行日志等弥补，而且还能加深对redis的了解，何乐而不为呢
+  * 起源: 做完 nodeclub-koa 后，对做 web 应用有些厌倦，闲了一段时间，想起以前一直想做的爬虫项目，就有了这个项目
+  * 技术栈: 使用 superagent 请求页面、cheerio 处理页面、redis 键空间通知做周期控制
+  * 困难: 目前项目的难点在于周期控制，其普适的解决方案可分为两种: 仅使用js ( node 的 timer ) 和配合第三方软件 ( linux 的 cron、使用 redis 的键空间通知、mq 等 )。个人觉得，以 js 为核心做周期控制不大靠谱，因为不清楚 node 进程什么时候会挂掉，在加上对于 redis 的操作比较熟悉，因此，项目采用的redis键空间通知做周期控制。这种方案发生错误的可能性较小，除非 node 进程挂掉并重启的同时，正好有一个键到期，这时可以采用执行日志等进行补救
+  * 总结: 项目根据传统爬虫功能划分为: 控制器 ( spider.js + cron ) 、下载器 ( downloader ) 、解析器 ( parser ) 、储存器 ( store ) 。关于爬虫目标为什么是github trending，而不是像别的爬虫爬妹子图什么的。因为，个人觉得，爬虫本身的技术的是简单的，无非是获取解析 html 页面，其难点在于，爬到数据之后的处理分析。相对而言 github trending 的数据是可分析的，例如: 统计某个项目一年的 star 数，哪一月 / 周 / 天的 star 数最多 / 最少，趋势如何，是突然上升而后消失不见还是趋于稳定等等，以后还可加上数据可视化等知识点
 
 * [nodeclub-koa](https://github.com/xiedacon/nodeclub-koa)
 
-  nodeclue-koa 是 nodeclue 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同，详情请看项目 [README](https://github.com/xiedacon/nodeclub-koa/blob/master/README.md)
+  nodeclue-koa 是 nodeclue 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同
+
+  * 起源: 从 java 转到 node 后，手头一直没有一个看得过去的 node 项目，所以就用新语法与中间件重写了 nodeclue，整个过程相当于看源码
+  * 技术栈: 使用 es6 语法、koa 框架、redis 缓存、mongoDB 数据库、async / await + promise ( bluebird ) 作为异步流程控制
+  * 困难: 这个项目的难点在于对异步的理解，async / await 是什么？promise 是什么？callback 又是什么？async / await 本质上是一个 promise 处理器的语法糖，负责当前一个await的promise resolve之后，继续执行代码直到await到pedding状态的promise或函数执行完毕为止，期间发生异常则直接抛出，以try-catch的形式处理，而不是 promise.catch()。promise则是一种组织异步代码的形式，保证promise链上的函数依次执行，相对于callback来说，promise是以一种由内向外的思维组织异步代码，callback这是以由外向内的思维组织异步代码。callback的话，得先从io调用说起，最初的计算机需要io调用时，都是让cpu等待io读取完毕后再继续执行，后来人们认为这种方式太浪费cpu性能，当某个进程发起io调用时会长期占用cpu时间，就改为了，需要io调用，则会建立一个回调，cpu继续执行，当io调用完毕后，再通知cpu执行回调，继续上一次的运算，这样cpu就能在io调用的时间做其他运算，提高计算性能。类似的，进程之于硬件(cpu io)，相当于线程之于进程，将进程也看做一种资源，当某个线程发起io调用，此时，就有两种解决方案，一种是像之前那样，线程等待直到io调用完毕，这时进程需要在io调用完毕后
+  * 总结
 
   * 从java转到node后，第一个还看得过去的项目，做这个项目的过程，几乎相当于看源码的过程，模块机制，异步流程控制(callback promise async/await)，koa中间件思想，开发环境／生产环境，mongoose，mongodb，redis（以前经常接触，第一次使用到项目中）
   * 整个项目使用es6语法，async/await+promise(bluebird)异步流程控制，并不是完全依赖async/await，只是将async/await作为简单的Promise().then().then()使用，将ejs模板引擎改为art-template，因为并不喜欢ejs的语法
