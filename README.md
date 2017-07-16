@@ -5,7 +5,7 @@
 * Github: [https://github.com/xiedacon](https://github.com/xiedacon)
 * Blog: [https://github.com/xiedacon/blog/issues](https://github.com/xiedacon/blog/issues)
 * 期望职位: NodeJS初级程序员
-* 到岗时间: 7月15号后
+* 到岗时间: 随时
 
 # 联系方式
 
@@ -18,7 +18,7 @@
 * 定位: 主攻 node、其他方面可以打打辅助
 * 态度: Talk is cheep, show me the code
 * 学习策略: 官方文档/书籍 => 技术博客 => google => bing
-* 优势: 学习能力强、自制力强、性格友善、爱钻研原理、轻度代码洁癖
+* 优势: 学习能力强、自制力强、严以律己宽以待人、爱钻研原理、轻度代码洁癖
 * 劣势: 非科班出身
   * 读书 [书单](https://github.com/xiedacon/notes/blob/master/books.md)
   * leetcode刷题 [项目地址](https://github.com/xiedacon/leetcode)
