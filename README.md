@@ -35,7 +35,7 @@
 * 2017.1~2017.2 深入 java: jvm ( 深入理解Java虚拟机 ) / jdk源码 ( 集合、并发 )
 * 2017.2~2017.3 leetcode 刷题
 * 2017.3~今 自学 node ( 深入浅出Node.js、官网api、... )
-* 2017.4~2017.5 nodeclue-koa 项目
+* 2017.4~2017.5 nodeclub-koa 项目
 * 2017.6~今 spider-trending 项目
 
 # 开源项目
