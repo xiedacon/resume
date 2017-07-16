@@ -4,7 +4,7 @@
 * 本科 / 华中农业大学 / 动物医学
 * Github: [https://github.com/xiedacon](https://github.com/xiedacon)
 * Blog: [https://github.com/xiedacon/blog/issues](https://github.com/xiedacon/blog/issues)
-* 期望职位: NodeJS初级程序员
+* 期望职位: Node.js 初级程序员
 * 到岗时间: 随时
 
 # 联系方式
@@ -15,26 +15,26 @@
 
 # 自我评价
 
-* 定位: 主攻 node、其他方面可以打打辅助
+* 定位: 主攻 Node.js、其他方面可以打打辅助
 * 态度: Talk is cheep, show me the code
 * 学习策略: 官方文档/书籍 => 技术博客 => google => bing
 * 优势: 学习能力强、自制力强、严以律己宽以待人、爱钻研原理、轻度代码洁癖
 * 劣势: 非科班出身
-  * 读书 [书单](https://github.com/xiedacon/notes/blob/master/books.md)
-  * leetcode刷题 [项目地址](https://github.com/xiedacon/leetcode)
+  * 读书 - [书单](https://github.com/xiedacon/notes/blob/master/books.md)
+  * leetcode 刷题 - [项目地址](https://github.com/xiedacon/leetcode)
 
 # 学习经历
 
 * 2015.6~2016.1 自学 javaweb 基础
-* 2016.1~2016.2 自学前端 ( html、css、js )
+* 2016.1~2016.2 自学前端 ( HTML、CSS、JS )
 * 2016.3~2016.5 bar 1.0 项目
 * 2016.5~2016.6 bar 2.0 项目
-* 2016.6-2016.7 重构前端知识 ( 从 MDN 学习 es6、html5、css3 )
+* 2016.6-2016.7 重构前端知识 ( 从 MDN 学习 ECMAScript6、HTML5、CSS3 )
 * 2016.7~2016.10 music 项目
 * 2016.10~今 学习 linux
 * 2017.1~2017.2 深入 java: jvm ( 深入理解Java虚拟机 ) / jdk源码 ( 集合、并发 )
 * 2017.2~2017.3 leetcode 刷题
-* 2017.3~今 自学 node ( 深入浅出Node.js、官网api、... )
+* 2017.3~今 自学 node ( 深入浅出 Node.js、官网 api、... )
 * 2017.4~2017.5 nodeclub-koa 项目
 * 2017.6~今 spider-trending 项目
 
@@ -64,28 +64,28 @@
 
   * 起源: 做完 bar 项目后，觉得自己前端部分学得太差，特别是 js 部分。于是通过 MDN 重构前端知识后，做的一个音乐类网站
   * 技术栈: 前端 jquery、后端 springmvc + spring + mybaits、mysql 数据库、Oauth 2.0、POI 导入 / 出 excel 表格
-  * 总结: 初次在项目中尝试使用前后端分离开发，前后端位于不同服务器，前端nginx、后端tomcat，并练习使用 git 版本管理、ci 集成
+  * 总结: 初次在项目中尝试使用前后端分离开发，前后端位于不同服务器，前端 nginx、后端 tomcat，并练习使用 git 版本管理、ci 集成
 
 ### bar
 
   一个前端页面仿百度贴吧的论坛类网站，有两个版本:
 
   * 基础版本
-    * 起源: 刚学完javaweb基础，想做一个专属于自己的javaweb项目，由于那时候贴吧逛得比较多，就有了该项目
-    * 技术栈: jsp + struts2 + spring + hibernate、mysql数据库、ueditor 富文本编辑器
+    * 起源: 刚学完 javaweb 基础，想做一个专属于自己的 javaweb 项目，由于那时候贴吧逛得比较多，就有了该项目
+    * 技术栈: jsp + struts2 + spring + hibernate、mysql 数据库、ueditor 富文本编辑器
     * 总结: 第一次独立动手做项目，从前端页面到后端数据库
   * 前后端分离版本
     * 起源: 接触了许多前后端分离相关的思想，决定将项目前后端分离，前端处理和生成页面，后端只提供接口
-    * 技术栈: jquery + struts2 + spring + hibernate、mysql数据库、ueditor 富文本编辑器
+    * 技术栈: jquery + struts2 + spring + hibernate、mysql 数据库、ueditor 富文本编辑器
     * 总结: 初次在项目中尝试前后端分离
 
 # 技能清单
 
-* 熟悉 ``node/java``
+* 熟悉 ``Node.js`` / ``Java``
 * 熟悉 ``linux`` 基本使用，将 ``linux`` 作为主力操作系统
-* 熟悉 ``mysql/mongodb/redis`` 基本使用
-* 熟悉 ``html/css/js``
+* 熟悉 ``mysql`` / ``mongodb`` / ``redis`` 基本使用
+* 熟悉 ``HTML`` / ``CSS`` / ``JS``
 * 熟悉 ``koa`` 基本使用与中间件编写
-* 熟练使用 ``async/await + promise`` 异步流程控制
+* 熟练使用 ``async / await`` + ``promise`` 异步流程控制
 * 熟练使用 ``git`` 作为版本控制
 * 了解持续集成、单元测试
