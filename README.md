@@ -51,9 +51,9 @@
 
 ### [nodeclub-koa](https://github.com/xiedacon/nodeclub-koa)
 
-  nodeclue-koa 是 nodeclue 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同
+  nodeclub-koa 是 nodeclub 的 koa 版本，采用 es6 语法重写，功能与 nodeclub 社区基本相同
 
-  * 起源: 从 java 转到 node 后，手头一直没有一个看得过去的 node 项目，所以就用新语法与中间件重写了 nodeclue，整个过程相当于看源码
+  * 起源: 从 java 转到 node 后，手头一直没有一个看得过去的 node 项目，所以就用新语法与中间件重写了 nodeclub，整个过程相当于看源码
   * 技术栈: 使用 es6 语法、koa 框架、redis 缓存、mongoDB 数据库、async / await + promise ( bluebird ) 作为异步流程控制
   * 困难: 这个项目的难点在于对异步的理解，async / await 是什么？promise 又是什么？async / await 本质上是一个 promise 处理器的语法糖，负责前一个 await 的 promise 解决之后，继续执行代码直到 await 到下一个 promise 或函数执行完毕为止，期间如果发生异常则直接抛出，以 try-catch 的形式处理，而不是 promise.catch()。promise 是一种组织异步代码的形式，保证 promise 链上的函数依次执行，相对于 callback 来说，promise 是用由内向外的思维组织异步代码，需要控制异步时，将promise从底层函数返回到顶层函数，callback 则是用由外向内的思维组织异步代码，需要控制异步时，将 callback 从顶层函数传递到底层函数
   * 总结: 在做这个项目的过程中，学会了 promise 异步流程控制，练习使用 git 版本管理、ci 集成、mocha 测试
