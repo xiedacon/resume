@@ -46,8 +46,8 @@
 
   * 起源: 做完 nodeclub-koa 后，对做 web 应用有些厌倦，闲了一段时间，想起以前一直想做的爬虫项目，就有了这个项目
   * 技术栈: 使用 superagent 请求页面、cheerio 处理页面、redis 键空间通知做周期控制
-  * 困难: 目前项目的难点在于周期控制，其普适的解决方案可分为两种: 仅使用js ( node 的 timer ) 和配合第三方软件 ( linux 的 cron、使用 redis 的键空间通知、mq 等 )。个人觉得，以 js 为核心做周期控制不大靠谱，因为不清楚 node 进程什么时候会挂掉，在加上对于 redis 的操作比较熟悉，因此，项目采用的redis键空间通知做周期控制。这种方案发生错误的可能性较小，除非 node 进程挂掉并重启的同时，正好有一个键到期，这时可以采用执行日志等进行补救
-  * 总结: 项目根据传统爬虫功能划分为: 控制器 ( spider.js + cron ) 、下载器 ( downloader ) 、解析器 ( parser ) 、储存器 ( store ) 。关于爬虫目标为什么是github trending，而不是像别的爬虫爬妹子图什么的。因为，个人觉得，爬虫本身的技术的是简单的，无非是获取解析 html 页面，其难点在于，爬到数据之后的处理分析。相对而言 github trending 的数据是可分析的，例如: 统计某个项目一年的 star 数，哪一月 / 周 / 天的 star 数最多 / 最少，趋势如何，是突然上升而后消失不见还是趋于稳定等等，以后还可加上数据可视化等知识点
+  * 困难: 目前项目的难点在于周期控制，其普适的解决方案可分为两种: 仅使用 js ( node 的 timer ) 和配合第三方软件 ( linux 的 cron、使用 redis 的键空间通知、mq 等 )。个人觉得，以 js 为核心做周期控制不大靠谱，因为不清楚 node 进程什么时候会挂掉，在加上对于 redis 的操作比较熟悉，因此，项目采用的 redis 键空间通知做周期控制。这种方案发生错误的可能性较小，除非 node 进程挂掉并重启的同时，正好有一个键到期，这时可以采用执行日志等进行补救
+  * 总结: 项目根据传统爬虫功能划分为: 控制器 ( spider.js + cron ) 、下载器 ( downloader ) 、解析器 ( parser ) 、储存器 ( store ) 。关于爬虫目标为什么是 github trending，而不是像别的爬虫爬妹子图什么的。因为，个人觉得，爬虫本身的技术的是简单的，无非是获取解析 html 页面，其难点在于，爬到数据之后的处理分析。相对而言 github trending 的数据是可分析的，例如: 统计某个项目一年的 star 数，哪一月 / 周 / 天的 star 数最多 / 最少，趋势如何，是突然上升而后消失不见还是趋于稳定等等，以后还可加上数据可视化等知识点
 
 ### [nodeclub-koa](https://github.com/xiedacon/nodeclub-koa)
 
@@ -55,7 +55,7 @@
 
   * 起源: 从 java 转到 node 后，手头一直没有一个看得过去的 node 项目，所以就用新语法与中间件重写了 nodeclub，整个过程相当于看源码
   * 技术栈: 使用 es6 语法、koa 框架、redis 缓存、mongoDB 数据库、async / await + promise ( bluebird ) 作为异步流程控制
-  * 困难: 这个项目的难点在于对异步的理解，async / await 是什么？promise 又是什么？async / await 本质上是一个 promise 处理器的语法糖，负责前一个 await 的 promise 解决之后，继续执行代码直到 await 到下一个 promise 或函数执行完毕为止，期间如果发生异常则直接抛出，以 try-catch 的形式处理，而不是 promise.catch()。promise 是一种组织异步代码的形式，保证 promise 链上的函数依次执行，相对于 callback 来说，promise 是用由内向外的思维组织异步代码，需要控制异步时，将promise从底层函数返回到顶层函数，callback 则是用由外向内的思维组织异步代码，需要控制异步时，将 callback 从顶层函数传递到底层函数
+  * 困难: 这个项目的难点在于对异步的理解，async / await 是什么？promise 又是什么？async / await 本质上是一个 promise 处理器的语法糖，负责前一个 await 的 promise 解决之后，继续执行代码直到 await 到下一个 promise 或函数执行完毕为止，期间如果发生异常则直接抛出，以 try-catch 的形式处理，而不是 promise.catch()。promise 是一种组织异步代码的形式，保证 promise 链上的函数依次执行，相对于 callback 来说，promise 是用由内向外的思维组织异步代码，需要控制异步时，将 promise 从底层函数返回到顶层函数，callback 则是用由外向内的思维组织异步代码，需要控制异步时，将 callback 从顶层函数传递到底层函数
   * 总结: 在做这个项目的过程中，学会了 promise 异步流程控制，练习使用 git 版本管理、ci 集成、mocha 测试
 
 ### [music](https://github.com/xiedacon/music)
