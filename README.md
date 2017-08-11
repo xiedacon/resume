@@ -3,7 +3,7 @@
 * 谢达 / 男 / 1995
 * 本科 / 华中农业大学 / 动物医学
 * Github: [https://github.com/xiedacon](https://github.com/xiedacon)
-* Blog: [https://github.com/xiedacon/blog/issues](https://github.com/xiedacon/blog/issues)
+* Blog: [http://xiedacon.com](http://xiedacon.com)
 * 期望职位: Node.js 初级程序员
 * 到岗时间: 随时
 
