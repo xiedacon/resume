@@ -43,7 +43,7 @@
 
 * [运行地址](http://www.maijiaxiuwang.com/visitor/index)
 * 运行环境：Node.js 6.2 ( 2018 年 3 月份左右升级为 Node.js 8 LST )
-* 基础技术栈：koa1 + knex ( MySQL ) + Redis + co
+* 基础技术栈：nginx + koa1 + Redis + co ( yield ) + knex ( MySQL 主从分离 )
 * 测试技术栈：ava + rewire
 * 主要工作内容
   * 负责项目后端开发与维护
