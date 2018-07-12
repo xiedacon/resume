@@ -9,8 +9,7 @@
 * Email：xiedacon@qq.com
 * GitHub：[https://github.com/xiedacon](https://github.com/xiedacon)
 * Blog：[http://www.xiedacon.com](http://www.xiedacon.com)
-* 期望职位：Node.js 初级程序员 ( 偏后端 )
-* 到岗时间：随时
+* 期望职位：Node.js 程序员
 
 ## 在校学习经历
 
@@ -41,26 +40,23 @@
 
 #### 买家秀项目
 
+* 项目概况：基于 Node.js 的电商项目，总用户量 10w+，日活约 3w，并发连接峰值约 2w。当系统请求量较大时，通过业务节点负载均衡，实现快速扩容，提高请求处理能力。通过 MySQL 读写分离提高数据库读取性能
 * [运行地址](http://www.maijiaxiuwang.com/visitor/index)
 * 运行环境：Node.js 6.2 ( 2018 年 3 月份左右升级为 Node.js 8 LST )
-* 基础技术栈：nginx + koa1 + Redis + co ( yield ) + knex ( MySQL 主从分离 )
+* 基础技术栈：nginx + koa1 + Redis + co ( yield ) + knex
 * 测试技术栈：ava + rewire
 * 主要工作内容
-  * 负责项目后端开发与维护
-  * 负责 pc 端页面与部分手机端页面开发
-* 突出贡献
-  * 修改核心匹配逻辑，加入 redis 缓存，使性能提升 1 倍以上
-  * 开发 [hbs-helpers](https://github.com/xiedacon/hbs-helpers) 大大减少了 *.hbs 的代码量，并且易于根据技术需求和业务逻辑进行扩展
-  * 建立单元测试模板，使用 ``函数.test.js`` 对应 ``函数`` 的形式编写单元测试，简化单元测试的编写
-  * 使用前端页面与后端模型结合的思路，重构发单页面，降低代码理解难度，易于编写健壮代码
+  * 优化匹配接口：系统后端压力主要集中于整点的匹配接口，在成交量达到 8k 单 / 天时，原有的匹配接口达到瓶颈。通过优化核心匹配代码，node-cron 库定时预匹配，减少匹配接口处理时间。再加入 Redis 作为缓存层，缓解整点数据库压力。优化后，系统成交量最高达到 3w 单 / 天，预计瓶颈为 4 ~ 5w 单 / 天
+  * 优化数据记录导出：通过将导出文件修改为 csv 格式并使用 stream 模式处理，使导出文件大小减少 60 ~ 70%，时间减少 50% 左右，并且可以通过参数决定导出类型
+  * 开发模板工具类库：原有模板工具类库 [handlebars-helpers](https://github.com/helpers/handlebars-helpers) 使用繁琐、扩展性差。开发了 [hbs-helpers](https://github.com/xiedacon/hbs-helpers)，使 helper 可以在块级和行级中混合使用，减少了模板文件的代码量，并且易于根据技术需求和业务逻辑进行自定义
 
 ## 开源项目
 
-* [hbs-helpers](https://github.com/xiedacon/hbs-helpers)：用于 Handlebars 模板引擎的 helper 集，相比于其他类似项目，更倾向于让使用者自定义 helper
-* [coding_robot](https://github.com/xiedacon/coding_robot)：钉钉的 Coding 机器人，用于将 Coding 的各种动态同步到钉钉
+* [hbs-helpers](https://github.com/xiedacon/hbs-helpers)：用于 Handlebars 模板引擎的 helper 集，helper 可以在块级或行级混合使用，且易于自定义
+* [coding_robot](https://github.com/xiedacon/coding_robot)：钉钉的 Coding 机器人，用于将 Coding 的各种动态同步到钉钉，支持自定义消息模板、多机器人配置
   * 测试技术栈：ava + rewire ( 测试覆盖率 98% )
-* [generate](https://github.com/xiedacon/generate)：项目生成手脚架，可通过自定义模板用于任何类型的项目生成
-* [small-server](https://github.com/xiedacon/small-server)：简易静态服务器实现
+* [generate](https://github.com/xiedacon/generate)：项目生成手脚架，支持自定义项目模板、插件系统 ( 例如：项目初始化时 git init、npm install 等命令 )
+* [small-server](https://github.com/xiedacon/small-server)：简易静态服务器实现，支持 gzip 压缩、断点续传功能
 * [nodeclub-koa](https://github.com/xiedacon/nodeclub-koa)：使用 koa2 重写的 [nodeclub](https://github.com/cnodejs/nodeclub)
   * 基础技术栈：koa2 + mongoose ( MongoDB ) + Redis + async / await
   * 测试技术栈：mocha + power-assert ( 测试覆盖率 82% )
@@ -70,9 +66,9 @@
 ## 技能清单
 
 * 熟悉 Node.js / Java
-* 熟悉 Linux 基本使用，并使用 linux 作为主力操作系统
+* 熟悉 Linux 基本使用，并使用 Linux 作为主力操作系统
 * 熟悉 MySQL / MongoDB / Redis 相关类库的使用
-* 熟悉前端基本技能 ( HTML / CSS / JS 等 )
+* 熟悉前端基本技能 ( HTML / CSS / JS )
 * 熟练使用 Git
 * 了解持续集成、单元测试、Docker
 
