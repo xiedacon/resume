@@ -12,7 +12,7 @@
 
 ## 技能清单
 
-* 熟悉 Node.js / Typescript / Java
+* 熟悉 Node.js / TypeScript / Java
 * 熟悉 MySQL / Redis 相关类库的使用
 * 熟悉 Linux / Git / Docker 等必备开发技能
 * 了解 React / Vue，能使用相应 UI 库 ( AntDesign ) 实现后台前端
