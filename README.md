@@ -36,7 +36,8 @@
 * 主要职责：技术负责人，负责平台服务端、后台前端、小程序 sdk 的设计与实现
 * 相关技术：Node.js + Egg.js + TypeScript + MySQL + Redis + RocketMQ + AntDesign
 * 项目结果
-  1. 2 业务系统接入
+  1. 一个月时间完成项目主要功能，并基于其开发了一套小程序二维码裂变业务系统
+  2. 2 业务系统接入
 
 ### 某保险业务系统 <span style="float: right;">2019 年 12 月 ~ 2020 年 1 月<span>
 
