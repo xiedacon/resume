@@ -1,5 +1,5 @@
 body {
-  color:#444443;
+  color: #444443;
 }
 
 #content {
@@ -8,7 +8,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Lato", "PingFang SC", "Microsoft YaHei", sans-serif;
   word-break: break-all;
 }
 
@@ -19,7 +19,7 @@ h2 {
 }
 
 h2::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 0.9em;
   width: 4px;
